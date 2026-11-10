@@ -2,6 +2,10 @@
 
 A clean full-stack starter running on [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and Drizzle support.
 
+## Deploying to Vercel
+
+Import the repository into Vercel and set the project root to the repository root. `vercel.json` selects the Next.js framework and runs `pnpm run build:vercel`, which builds the App Router app with Next.js while preserving the existing Cloudflare `build` command. No environment variables are required for the current public site. Cloudflare Worker bindings in `db/index.ts` are not available on Vercel; use a Vercel-compatible database adapter before importing that module into a deployed route.
+
 ## Prerequisites
 
 - Node.js `>=22.13.0`
